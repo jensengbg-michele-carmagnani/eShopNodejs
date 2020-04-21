@@ -1,0 +1,79 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "phone",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "500€"
+    },
+    {
+      "id": 2,
+      "name": "computer",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "1000€"
+    },
+    {
+      "id": 3,
+      "name": "headphone",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "300€"
+    },
+    {
+      "id": 4,
+      "name": "Ipad",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "480€"
+    },
+    {
+      "id": 5,
+      "name": "printer",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "340€"
+    },
+    {
+      "id": 6,
+      "name": "charger",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "30€"
+    }
+  ],
+  "count": 0,
+  "cart": [
+    {
+      "id": 4,
+      "name": "Ipad",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "480€"
+    },
+    {
+      "id": 5,
+      "name": "printer",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "340€"
+    },
+    {
+      "id": 1,
+      "name": "phone",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "500€"
+    },
+    {
+      "id": 2,
+      "name": "computer",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "1000€"
+    },
+    {
+      "id": 3,
+      "name": "headphone",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "300€"
+    },
+    {
+      "id": 6,
+      "name": "charger",
+      "urlImg": "https://placeimg.com/640/480/tech/sepia",
+      "price": "30€"
+    }
+  ]
+}

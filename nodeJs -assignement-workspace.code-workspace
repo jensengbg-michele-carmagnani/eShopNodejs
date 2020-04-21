@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "/Users/michelecarmagnani/Git/jensen/node-js/lowdb"
+		},
+		{
+			"path": "/Users/michelecarmagnani/Git/jensen/node-js/nodejs-lowdb-exercise"
+		},
+		{
+			"path": "/Users/michelecarmagnani/Git/jensen/node-js/express-demo"
+		},
+		{
+			"path": "/Users/michelecarmagnani/Git/jensen/node-js/todo-app-example"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "nodejs-lowdb-exercise"
+	}
+}

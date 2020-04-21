@@ -1,0 +1,94 @@
+html body{
+  width: 100vw;
+  height: 100vh;
+}
+
+/*******************************************************/
+/******************* NavBar ****************************/
+/*******************************************************/
+
+.navBar{
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: khaki;
+
+}
+
+#cart img{
+  height: 50px;
+  width: 50px;
+}
+#number{
+  border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+   display: block;
+
+    background: rgb(252, 71, 71);
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+
+    font: 20px Arial, sans-serif;
+}
+
+/*******************************************************/
+/******************* Product's gallery *****************/
+/*******************************************************/
+
+.gallery{
+  
+display: grid;
+justify-content: center ;
+align-items: center;
+grid-template-columns:  35% 35% ;
+grid-gap: 20px;
+margin-top:10%;
+margin-bottom: 10%;
+
+  }
+
+.gallery div img{
+  justify-self: center;
+  height:100%;
+  width: 100%;
+  }
+
+  h3 {
+    text-align: center;
+
+  }
+button{
+  padding: 10px;
+  width: 200px;
+  border-radius: 10px;
+  margin: auto;
+}
+span{
+  display: none;
+}
+
+
+
+/*******************************************************/
+/******************* Media queries **********************/
+/*******************************************************/
+
+@media only screen and (max-width: 400px){
+
+  .gallery{
+  
+    grid-template-columns:  70% ;
+    grid-gap: 20px;
+    margin-top:10%;
+
+}
+
+.gallery img {
+  height: 100%;
+  width: 100%;
+  }
+}
