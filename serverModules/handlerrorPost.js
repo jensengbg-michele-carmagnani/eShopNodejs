@@ -1,6 +1,6 @@
 
 const getErrorPost = (req, res, db) =>{
-  
+    
   let product = db.get('products').find({id :parseInt(req.params.id)}).value(); //name : req.params.name, urlImg : req.params.urlImg, price : req.params.price
   // if the prodcut existing into the products db
   if (!product) return res.status(404).send('The product selected is not existing');

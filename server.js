@@ -25,7 +25,7 @@ function initDB(){
 
 // GET all the products from PRODUCT DB // Hämta varukorgen med alla tillagda produkter.
 app.get('/api/products/getAll',(req,res, ) =>{
-
+   initDB(); // init cart db
   allProducts = db.get('products').value();
   res.send(allProducts);
   console.log(allProducts);
@@ -35,9 +35,7 @@ app.get('/api/products/getAll',(req,res, ) =>{
 //  POST --> add the product selected from "PRODUCT db"  into "CART db"
 app.post('/api/products/postoCart/:id', (req,res) => {
   //call the module 
-   errorPost.getErrorPost(req, res, db);
-
-  
+  errorPost.getErrorPost(req, res, db);
   });
 
 
@@ -56,10 +54,13 @@ app.get("/api/cart/getAll", (req, res) => {
   res.send(cartAll);
 })
   
-//initDB();
 
 
 
 
 
-app.listen(port,() => console.log(`Server running on port: ${port}`));
+
+app.listen(port,() => {
+  console.log(`Server running on port: ${port}`)
+  
+});
