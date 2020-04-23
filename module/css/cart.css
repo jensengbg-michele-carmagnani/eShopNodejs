@@ -13,7 +13,6 @@
 
 .title {
   height: 60px;
-  border-bottom: 1px solid #E1E8EE;
   padding: 20px 30px;
   color: #5E6977;
   font-size: 18px;
@@ -30,8 +29,10 @@
   display: flex;
 }
 .image img {
-  width: 40%  ;
-  height: 40%;
+  max-width: 180px;
+  min-width: 25%;
+  max-height: 180px;
+  min-height: 25% ;
 }
 .item:nth-child(n) {
   border-top:  1px solid #E1E8EE;
