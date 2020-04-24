@@ -36,7 +36,7 @@ async function displayProduct(products) {
 }
 
 //Post items in the cart
-async function getCart(productID){
+async function postToCart(productID){
   try {
 
     let id = parseInt(productID);
@@ -65,7 +65,7 @@ async function getCart(productID){
        buyButton[i].addEventListener('click',  function (){
          console.log('hello'); 
          let productID = buyButton[i].value;
-     getCart(productID);
+     postToCart(productID);
      cartNumber();
    });
   }
