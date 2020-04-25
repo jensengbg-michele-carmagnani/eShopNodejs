@@ -1,3 +1,88 @@
+html body{
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Noto Sans TC', sans-serif;
+  
+}
+
+
+.navBar{
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-color: khaki;
+  font-family: 'Bangers', cursive;
+font-family: 'Noto Sans TC', sans-serif;
+  font-size: 20px ;
+
+}
+
+
+/* cart menu  */
+.navbar .word.c {
+  animation-delay: 0.3s;
+  color: #CC4C31;
+  text-shadow: 6px 6px #FBAA95,
+               3px 3px #FBAA95;
+
+}
+.navbar .word.e {
+  animation-delay: 0.15s;
+  color: #7CC0BE;
+  text-shadow: 6px 6px #B4E0E3,
+               3px 3px #B4E0E3;
+}
+
+.navbar .word.k {
+  animation-delay: 0.4s;
+  color: #FDAA35;
+  text-shadow: 6px 6px #F6C17E,
+               3px 3px #F6C17E;
+}
+
+.navbar .word.t {
+  animation-delay: 0.25s;
+  color: #58A473;
+  text-shadow: 6px 6px #A6CAA1,
+               3px 3px #A6CAA1;
+}
+
+.navbar .word.d {
+  animation-delay: 0.5s;
+  color: #453876;
+  text-shadow: 6px 6px #A49BC0,
+               3px 3px #A49BC0;
+}
+
+.navbar .word.o {
+  animation-delay: 0.5s;
+  color: #453876;
+  text-shadow: 6px 6px #A49BC0,
+               3px 3px #A49BC0;
+}
+
+.navbar .word  {
+  position: relative;
+  animation: move 1.85s infinite;
+}
+
+@keyframes move {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -20px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
+
+
+
 
 /* cart css  */
 .shopping-cart {
@@ -142,6 +227,10 @@ input:focus {
   font-size: 16px;
   color: #43484D;
   font-weight: 300;
+}
+.totalPrice{
+  display:flex ;
+  justify-content: center;
 }
 
 @media (max-width: 800px) {
