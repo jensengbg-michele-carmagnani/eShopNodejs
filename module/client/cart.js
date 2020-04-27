@@ -1,7 +1,25 @@
 //get body ele
 const gallery =  document.querySelector('.shopping-cart');
 
-let totalPrice = 0;
+console.log(gallery);
+  //console.log('bodLoader',boxLoader);
+
+
+//function loader
+function initLoader(){
+  let boxLoader = document.querySelector('.boxLoader');
+  console.log('bodLoader',boxLoader);
+  setTimeout(() => {
+  boxLoader.style.opacity = 0;
+  boxLoader.style.display = 'none';
+  gallery.style.display = 'block';
+    setTimeout(() => {
+      gallery.style.opacity = 1;
+    }, 50);
+
+  }, 4000);
+}
+
 
 //Post item in the cart 
   async function getCart(){
@@ -24,17 +42,24 @@ let totalPrice = 0;
  }
 
  function displayCart (cartItems){
+   let totalPrice = 0;    
  gallery.innerHTML = '';
  gallery.innerHTML += ` <section class="title">
                             Shopping Bag
                         </section>`;
+
+  gallery.innerHTML += `<div class = "boxLoader">
+                        <div class="loader">
+                          <div class="circle"></div>
+                          <div class="circle"></div>
+                        </div>`
   for (cartItem of cartItems){
     const { urlImg, name, price,id } = cartItem;
     totalPrice = totalPrice + parseInt(price);
     gallery.innerHTML += `
 
   
-   <section class="item" value=${id}>
+   <section class="item " value=${id}>
    <section class="buttons">
      <button class="delete-btn" value=${id}></button>
      <span class="like-btn heart"></span>
@@ -59,7 +84,8 @@ let totalPrice = 0;
   </section>
   
   <section class="total-price">${price}</section>
- </section>`
+ </section>
+ </div>`
  
 }
 gallery.innerHTML += `<section class="totalPrice">
@@ -103,3 +129,4 @@ async function deleteCartSection(){
 }
 
 getCart();
+initLoader();
