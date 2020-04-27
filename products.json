@@ -40,16 +40,10 @@
   "count": 0,
   "cart": [
     {
-      "id": 1,
-      "name": "phone",
+      "id": 3,
+      "name": "headphone",
       "urlImg": "https://placeimg.com/640/480/tech/sepia",
-      "price": "500"
-    },
-    {
-      "id": 2,
-      "name": "computer",
-      "urlImg": "https://placeimg.com/640/480/tech/sepia",
-      "price": "1000"
+      "price": "300"
     }
   ]
 }

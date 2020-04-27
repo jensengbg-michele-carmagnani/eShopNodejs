@@ -67,24 +67,24 @@ gallery.innerHTML += `<section class="totalPrice">
  <section class="total-price"><p>Total price :</p><p>${totalPrice}</p></section>
 </section>`
 
-getAllDeletes();
+getCartButtons(); 
 }
 
-async function getAllDeletes(){
-  let deleteProduct = document.querySelectorAll('.delete-bnt')  ;
+async function getCartButtons(){
+  let deleteProduct = document.querySelectorAll('.delete-btn')  ;
   console.log(deleteProduct);
   
   for ( let i = 0; i < deleteProduct.length; i++ ){
     
     deleteProduct[i].addEventListener('click', function () {
-      productId = deleteProduct[i].value;
+      productId = parseInt(deleteProduct[i].value);
       deleteItems(productId);
-      deleteCartSection(productId);
+      getCart();
     });
   }
 
 }
-async function deleteItems(){
+async function deleteItems(id){
 
   try{
   const response = await fetch(`http://localhost:3000/api/cart/delete/${id}`, {method:  'DELETE'});
