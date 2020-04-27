@@ -1,22 +1,29 @@
 
 
 /* hide the item section and total price */
-.item{
-  display: none;
-  opacity: 0;
+/* .item{
+  display: block;
+  opacity: 1;
 }
 .totalPrice {
-  display: none;
-  opacity: 0;
-}
+  display: block;
+  opacity: 1;
+} */
 
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  
+  
+}
 .loader {
+
   
   opacity: 1;
   display: block;
-  position: absolute;
-  left: 600px;
-  top: 500px;
   height: 50px;
   width: 50px;
   transform-origin: bottom center;

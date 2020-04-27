@@ -1,23 +1,22 @@
 //get body ele
-const gallery =  document.querySelector('.shopping-cart');
-
+const gallery =  document.querySelector('.shoppingCart');
 console.log(gallery);
   //console.log('bodLoader',boxLoader);
 
 
 
 function initLoader(){
-  let boxLoader = document.querySelector('.loader');
-  console.log('loader',boxLoader);
+  let loader = document.querySelector('.wrapper');
+  console.log('loader',loader);
   setTimeout(() => {
   loader.style.opacity = 0;
   loader.style.display = 'none';
   gallery.style.display = 'block';
     setTimeout(() => {
       gallery.style.opacity = 1;
-    }, 50);
+    }, 100);
 
-  }, 4000);
+  }, 2000);
 }
 
 
@@ -31,6 +30,7 @@ function initLoader(){
     const data = await response.json();
     console.log('The product added is',data);
     displayCart(data);
+    initLoader();
     return data
     
     
@@ -42,58 +42,53 @@ function initLoader(){
  }
 
  function displayCart (cartItems){
-   let totalPrice = 0;    
- gallery.innerHTML = '';
- gallery.innerHTML += ` <section class="title">
-                            Shopping Bag
-                        </section>`;
+  let totalPrice = 0;    
+gallery.innerHTML = '';
+gallery.innerHTML += ` <section class="title">
+                           Shopping Bag
+                       </section>`;
 
-  gallery.innerHTML += `
-                        <div class="loader">
-                          <div class="circle"></div>
-                          <div class="circle"></div>
-                        </div>`
-  for (cartItem of cartItems){
-    const { urlImg, name, price,id } = cartItem;
-    totalPrice = totalPrice + parseInt(price);
-    gallery.innerHTML += `
 
-  
-   <section class="item " value=${id}>
-   <section class="buttons">
-     <button class="delete-btn" value=${id}></button>
-     <span class="like-btn heart"></span>
-   </section>
+ for (cartItem of cartItems){
+   const { urlImg, name, price,id } = cartItem;
+   totalPrice = totalPrice + parseInt(price);
+   gallery.innerHTML += `
  
-  <section class="image">
-    <img src=${urlImg} alt="" />
+  <section class="item " value=${id}>
+  <section class="buttons">
+    <button class="delete-btn" value=${id}></button>
+    <span class="like-btn heart"></span>
   </section>
- 
-  <section class="description">
-    <span>${name}</span>
-  </section>
- 
-  <section class="quantity">
-     <button class="plus-btn" type="button" name="button">
-      +
-     </button>
-     <input type="text" name="name" value="1">
-     <button class="minus-btn" type="button" name="button">
-       -
-     </button>
-  </section>
-  
-  <section class="total-price">${price}</section>
+
+ <section class="image">
+   <img src=${urlImg} alt="" />
  </section>
- </div>`
+
+ <section class="description">
+   <span>${name}</span>
+ </section>
+
+ <section class="quantity">
+    <button class="plus-btn" type="button" name="button">
+     +
+    </button>
+    <input type="text" name="name" value="1">
+    <button class="minus-btn" type="button" name="button">
+      -
+    </button>
+ </section>
  
+ <section class="total-price">${price}</section>
+</section>
+</div>`
+
 }
 gallery.innerHTML += `<section class="totalPrice">
-
- <section class="total-price"><p>Total price :</p><p>${totalPrice}</p></section>
+<section class="total-price"><p>Total price :</p><p>${totalPrice}</p></section>
 </section>`
 
-getCartButtons(); 
+getCartButtons();
+ 
 }
 
 async function getCartButtons(){
@@ -105,6 +100,7 @@ async function getCartButtons(){
     deleteProduct[i].addEventListener('click',  () => {
       productId = parseInt(deleteProduct[i].value);
       deleteItem(productId);
+    
       getCart();
     });
   }
@@ -129,4 +125,4 @@ async function deleteCartSection(){
 }
 
 getCart();
-initLoader();
+//initLoader();

@@ -1,7 +1,14 @@
-html body{
-  width: 100vw;
+
+ 
+
+  
+ body{
+  
   height: 100vh;
   font-family: 'Noto Sans TC', sans-serif;
+  background-image: linear-gradient(200deg, #f5f7fa 0%,#c3cfc2 100%) ;
+  /* background-size: cover; */
+  
   
 }
 
@@ -13,31 +20,23 @@ html body{
   align-items: flex-end;
   background-color: khaki;
   font-family: 'Bangers', cursive;
-font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Noto Sans TC', sans-serif;
   font-size: 20px ;
 
 }
 
 
-/* cart menu  */
-
-
-
-
-
-
-
-
 /* cart css  */
-.shopping-cart {
+.shoppingCart {
   width: 80%;
   height: 80%;
-  margin: 80px auto;
+  margin: 80px auto; 
   background: #FFFFFF;
   box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
   border-radius: 6px;
-  display: flex;
-  flex-direction: column;
+  display: none;
+ transition: opacity 2s ease-in;
+
 }
 
 .title {
@@ -49,13 +48,14 @@ font-family: 'Noto Sans TC', sans-serif;
 }
  
 .item {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
   height: 120px;
   width: 91%;
-  display: flex;
+  
 }
 .image img {
   max-width: 180px;
@@ -203,3 +203,4 @@ input:focus {
     margin-right: 20px;
   }
 }
+
