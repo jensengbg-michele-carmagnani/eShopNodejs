@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
 
+
+
 const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('products.json');
 const db = low(adapter);
+const chat = require('./serverChat');
 
 
 // module statement 

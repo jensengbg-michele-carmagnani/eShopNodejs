@@ -5,13 +5,13 @@ console.log(gallery);
   //console.log('bodLoader',boxLoader);
 
 
-//function loader
+
 function initLoader(){
-  let boxLoader = document.querySelector('.boxLoader');
-  console.log('bodLoader',boxLoader);
+  let boxLoader = document.querySelector('.loader');
+  console.log('loader',boxLoader);
   setTimeout(() => {
-  boxLoader.style.opacity = 0;
-  boxLoader.style.display = 'none';
+  loader.style.opacity = 0;
+  loader.style.display = 'none';
   gallery.style.display = 'block';
     setTimeout(() => {
       gallery.style.opacity = 1;
@@ -48,7 +48,7 @@ function initLoader(){
                             Shopping Bag
                         </section>`;
 
-  gallery.innerHTML += `<div class = "boxLoader">
+  gallery.innerHTML += `
                         <div class="loader">
                           <div class="circle"></div>
                           <div class="circle"></div>
@@ -102,15 +102,15 @@ async function getCartButtons(){
   
   for ( let i = 0; i < deleteProduct.length; i++ ){
     
-    deleteProduct[i].addEventListener('click', function () {
+    deleteProduct[i].addEventListener('click',  () => {
       productId = parseInt(deleteProduct[i].value);
-      deleteItems(productId);
+      deleteItem(productId);
       getCart();
     });
   }
 
 }
-async function deleteItems(id){
+async function deleteItem(id){
 
   try{
   const response = await fetch(`http://localhost:3000/api/cart/delete/${id}`, {method:  'DELETE'});

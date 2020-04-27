@@ -61,7 +61,7 @@ async function postToCart(productID){
      
      for ( let i = 0; i < buyButton.length; i++ ){
        
-       buyButton[i].addEventListener('click',  function (){
+       buyButton[i].addEventListener('click', () => {
          console.log('hello'); 
          let productID = buyButton[i].value;
      postToCart(productID);
