@@ -11,10 +11,10 @@ const chatArea = document.querySelector('.chat-area');
 
 
 
-// function showChat(){
-//   login.classList('.hide');
-//   chat.classList('.show');
-// }
+function showChat(){
+  login.style.display = 'none';
+  chat.style.display  = 'block';
+}
 function typingMessage() {
   document.querySelector('.typingMessage').innerHTML = username + ' typing';
 }
@@ -33,7 +33,7 @@ function addMessge(message) {
 submitButton.addEventListener('click', () => {
   let username = usernameElem.value;
   SocketIO.emit('join', username);
-  //showChat();
+  showChat();
 });
 
 sendButton.addEventListener('click', () => {

@@ -110,18 +110,34 @@ background-color:#f3f3f3 ;
 display: flex;
 justify-content: center;
 align-items: center;
+text-decoration: none;
 }
-.help{
-
+.helpIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  background-color: darkseagreen;
 }
-.guider{
-
+.guidereIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: darkviolet;
 }
-.bikester{
-
+.bikesterIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-.information{
-  
+.informationIn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: dodgerblue;
 }
 
 

@@ -28,7 +28,7 @@ async function displayProduct(products) {
   for (product of products) {
     const { urlImg, name, price, id } = product;
     
-     productContainer.innerHTML += `<div><img src =${urlImg}><h3>${name} price :${price}</h3><button class="buyProduct" type="submit" value=${id}>Buy</button>
+     productContainer.innerHTML += `<div><img src =${urlImg}><h3>${name} price $${price}</h3><button class="buyProduct" type="submit" value=${id}>Buy</button>
      </div>`;
     }
     getButtons();
@@ -44,13 +44,13 @@ async function postToCart(productID){
     const response = await fetch ( `http://localhost:3000/api/products/postoCart/${id}`, { method: 'POST' });
     const data = await response.json();
     console.log('The product added is',data.name);
-    
-    return data;
+   
 
   } catch (error) {
     alert('You can only buy one of this product!!! ', error);
 
   }
+ 
  }
 
 
@@ -66,7 +66,7 @@ async function postToCart(productID){
          console.log('hello'); 
          let productID = buyButton[i].value;
      postToCart(productID);
-     cartNumber();
+    cartNumber();
    });
   }
  }

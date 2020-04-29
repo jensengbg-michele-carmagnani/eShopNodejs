@@ -9,38 +9,22 @@ const low = require('lowdb');
 const FileSync = require('lowdb/adapters/FileSync');
 const adapter = new FileSync('products.json');
 const db = low(adapter);
+const port =  process.env.PORT || 3000;
 
-// Chat implementation
 
-io.on('connection', (socket) =>{
-  console.log('user connected');
-  socket.on('join', (user) =>{
-    socket.username = user;
-    console.log(user);
-    socket.broadcast.emit('user join', user);
-  });
-
-  socket.on('new message', (message) =>{
-    let composeMessage = socket.username + ': ' + message;
-    console.log('message is :', composeMessage);
-    io.emit('message', composeMessage);
-  });
-
-  socket.on('typing', () => {
-    socket.broadcast.emit('typing', socket.username);
-  });
-}); 
 
 // module statement 
-const errorDelete = require('./serverModules/handlerrorDelete');
-const errorPost = require('./serverModules/handlerrorPost');
+const errorDelete = require('./server_modules/handlerrorDelete');
+const errorPost = require('./server_modules/handlerrorPost');
+const startChat = require('./serverChat');
+
+// methods 
 app.use(express.static('module'));
-
-
-const port =  process.env.PORT || 3000;
 app.use(express.json());
 
 
+
+// INIT DATA BASE 
 function initDB(){
   db.defaults({ products: [], cart:[] }).write();
   db.get('cart').remove().write();
@@ -49,7 +33,7 @@ function initDB(){
 
 // GET all the products from PRODUCT DB // Hämta varukorgen med alla tillagda produkter.
 app.get('/api/products/getAll',(req,res, ) =>{
-   initDB(); // init cart db
+  initDB(); // init cart db
   allProducts = db.get('products').value();
   res.send(allProducts);
   console.log(allProducts);
@@ -58,30 +42,32 @@ app.get('/api/products/getAll',(req,res, ) =>{
 
 //  POST --> add the product selected from "PRODUCT db"  into "CART db"
 app.post('/api/products/postoCart/:id', (req,res) => {
-  //call the module 
+  //post module ---> from handlerrorPost.js
   errorPost.getErrorPost(req, res, db);
-  });
+});
 
 
 
 //DELETE the product from the cart db
-  app.delete('/api/cart/delete/:id', (req,res) =>{
-    //call the module  handlerorrDelete
-   errorDelete.getError(req, res, db);
-    
+app.delete('/api/cart/delete/:id', (req,res) =>{
+  //delete module---> from handlerorrDelete.js
+  errorDelete.getError(req, res, db);
+  
 });
 
 
 // GET ALL items from the cart db
 app.get("/api/cart/getAll", (req, res) => {
   const cartAll = db.get('cart').value();
-  res.send(cartAll);
+  res.send( cartAll);
 })
-  
 
 
 
+//CHAT ----> from serverChat.js
+startChat.chat(io);
 
+// HTTP SERVER 
 http.listen(port,() => {
   console.log(`Server running on port:${port} `)
-  });
+});

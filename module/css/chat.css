@@ -19,7 +19,7 @@ body{
 }
 .back a{
   position: absolute;
-  left: 10vw;
+  left: 80vw;
   top: 80vh;
   border: 1px solid black;
   text-align: center;
@@ -50,6 +50,7 @@ body{
   justify-content: center;
   align-items: center;
 }
+
 .login{
   display: flex;
   flex-direction: column;
@@ -67,13 +68,11 @@ body{
   border-bottom: solid 2px black; 
   overflow: auto; 
   margin-bottom: 20px;
-  
   width: 25vw;
 }
 
 
 .login__button{
-  
   text-transform: uppercase;
   width: 240px;
   height: 60px;
@@ -91,32 +90,7 @@ body{
   transition: .3s;
 
 }
-/* .login__button::before{
-  content: '';
-  height: 100%;
-  width: 100%;
-  opacity: .5;
-  background:#009688;
-  position: absolute;
-  top: -100%;
-  left: 0;
-  z-index: -1;
-  transition: .3s;
 
-}
-.login__button::after{
-  content: '';
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  background:#009688;
-  top: -100%;
-  left: 0;
-  z-index: -1;
-  transition: .3s;
-  transition-delay: .2s;
-
-} */
 .login__button:hover{
   color: rgb(244, 126, 36);
   background-color:rgb(126, 190, 193);
@@ -134,9 +108,7 @@ top: 0;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  height: 200px;
-  min-width: 80vw;
-  /* border: 1px solid grey; */
+  display: none;
 }
 .chat-area {
   height: 400px;
