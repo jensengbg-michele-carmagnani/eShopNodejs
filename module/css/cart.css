@@ -18,10 +18,10 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  background-color: khaki;
   font-family: 'Bangers', cursive;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 20px ;
+  border-bottom: 1px black solid;
 
 }
 

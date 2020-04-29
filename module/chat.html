@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Socket.IO Chat Example</title>
+  <link rel="stylesheet" href="./css/chat.css">
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="wrapper">
+    <h1 class="title">
+      CHAT SUPPORT 
+    </h1>
+  <section class="login">
+    <input type="text" name="" placeholder="write you name" id="message" class="login__input">
+    <button id="submit" class="login__button">Get in</button>
+  </section>
+    <div class="chat">
+      <section class="chat-area"></section>
+      <section class="submit-message">
+        <input id="chat-message" class="submit-message__imput"></section>
+        <p class="typingMessage"></p>
+        <button id="send" class="submit-message___button">send message</button>
+      </section>
+    </div>
+    <div class="back"><a href="./index.html">back</a></div>
+</main>
+
+<script src="/socket.io/socket.io.js"></script>
+  <script src="./client/clientChat.js"></script>
+  <!-- <script src="/main.js"></script> -->
+</body>
+</html>

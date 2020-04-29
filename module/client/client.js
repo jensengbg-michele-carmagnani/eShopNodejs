@@ -27,6 +27,7 @@ async function displayProduct(products) {
 
   for (product of products) {
     const { urlImg, name, price, id } = product;
+    
      productContainer.innerHTML += `<div><img src =${urlImg}><h3>${name} price :${price}</h3><button class="buyProduct" type="submit" value=${id}>Buy</button>
      </div>`;
     }
