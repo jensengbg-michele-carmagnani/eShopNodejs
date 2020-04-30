@@ -72,16 +72,27 @@
   display: flex;
   justify-content: space-between;
   width: 100px;
+  height: 20px;
 }
-.delete-btn,
-.like-btn {
+.buttons .delete-btn
+{
+  width: 100%;
+  height: 30px;
   margin-right: 18px  ;
   Cursor: pointer;
 }
+button {
+
+  height: 30px;
+  background-color: #E1E8EE;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
 .delete-btn {
-  width: 18px;
+  
   height: 17px;
-  background: url(../img/DeletButton-50-ios.png) no-repeat center;
+  
 }
  
 .like-btn {
@@ -143,14 +154,7 @@
   font-weight: 300;
 }
  
-button[class*=btn] {
-  width: 30px;
-  height: 30px;
-  background-color: #E1E8EE;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
+
 .minus-btn  {
   margin-bottom: 3px;
   background-image: url(../img/minusButton-64.png) no-repeat;

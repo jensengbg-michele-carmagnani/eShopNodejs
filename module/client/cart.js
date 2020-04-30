@@ -56,8 +56,8 @@ gallery.innerHTML += ` <section class="title">
  
   <section class="item " value=${id}>
   <section class="buttons">
-    <button class="delete-btn" value=${id}></button>
-    <span class="like-btn heart"></span>
+    <button class="delete-btn" value=${id}>Delete</button>
+    
   </section>
 
  <section class="image">
