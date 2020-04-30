@@ -25,6 +25,23 @@ html body{
   background-repeat: no-repeat;
 
 }
+.navBar a{
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: all .3s;
+}
+.navBar a:hover{
+  text-decoration: none;
+  color: #d7da41;
+  margin-top: 5px;
+  font-size: 23px;
+  text-shadow: 2px 2px;
+  border-bottom: #272727 1px solid;
+  transition: all .3s;
+}
+/* .navBar a:hover .logo{
+  color: #1a1a1a;
+} */
 
 #cart img{
   height: 50px;
@@ -159,7 +176,7 @@ position: relative;
   color: #ffaa22;
   margin-bottom: 10px;
   font-size: 1.2em;
-  
+  text-decoration: none;
   transition: all .3s;
 }
 
@@ -167,6 +184,7 @@ position: relative;
   color: aliceblue;
   margin-left: 10px;
   transition: all .3s;
+  
 }
 
 .footer .footer-content .contact{

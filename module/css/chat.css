@@ -70,6 +70,9 @@ body{
   margin-bottom: 20px;
   width: 25vw;
 }
+#message{
+  border-bottom: 1px solid black;
+}
 
 
 .login__button{

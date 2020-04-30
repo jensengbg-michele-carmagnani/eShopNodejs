@@ -21,8 +21,22 @@
   font-family: 'Bangers', cursive;
   font-family: 'Noto Sans TC', sans-serif;
   font-size: 20px ;
-  border-bottom: 1px black solid;
+  
 
+}
+.navBar a{
+  text-decoration: none;
+  color: #1a1a1a;
+  transition: all .3s;
+}
+.navBar a:hover{
+  text-decoration: none;
+  color: #d7da41;
+  margin-top: 5px;
+  font-size: 23px;
+  text-shadow: 2px 2px;
+  border-bottom: #272727 1px solid;
+  transition: all .3s;
 }
 
 
